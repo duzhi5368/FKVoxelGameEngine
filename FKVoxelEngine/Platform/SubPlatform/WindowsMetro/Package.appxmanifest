@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="FreeKnight.FKVoxelEngine" Publisher="CN=501e7c05-6a51-451d-abda-6eebff9a67da" Version="0.1.0.0" />
+  <Properties>
+    <DisplayName>FKVoxelEngine</DisplayName>
+    <PublisherDisplayName>FreeKnight Personal</PublisherDisplayName>
+    <Logo>Assets\MetroStoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="FKVoxelEngine.App">
+      <VisualElements DisplayName="FKVoxelEngine" Logo="Assets\MetroLogo.png" SmallLogo="Assets\SmallLogo.png" Description="FKVoxelEngine" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" ShortName="FKVoxel" />
+        <SplashScreen Image="Assets\MetroSplashScreen.png" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{501E7C05-6A51-451D-ABDA-6EEBFF9A67DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FKVoxelEngine</RootNamespace>
+    <AssemblyName>FKVoxelEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDOWS, DESKTOP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS, DESKTOP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lidgren.Network, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asset\FKAssetManager.cs" />
+    <Compile Include="Asset\FKEngineAssets.cs" />
+    <Compile Include="Audio\FKAudioManager.cs" />
+    <Compile Include="Base\Algorithms\Noise\FKCellNoise.cs" />
+    <Compile Include="Base\Algorithms\Noise\FKClampNoise.cs" />
+    <Compile Include="Base\Algorithms\Noise\FKInvertNoise.cs" />
+    <Compile Include="Base\Algorithms\Noise\FKModifyNoise.cs" />
+    <Compile Include="Base\Algorithms\Noise\FKNoiseGen.cs" />
+    <Compile Include="Base\Algorithms\Noise\FKParamPerlinNoise.cs" />
+    <Compile Include="Base\Algorithms\Noise\FKPerlinNoise.cs" />
+    <Compile Include="Base\Algorithms\Noise\FKSimpleNoise.cs" />
+    <Compile Include="Base\Algorithms\Noise\IFKNoise.cs" />
+    <Compile Include="Base\DataStructs\FKConcurrentList.cs" />
+    <Compile Include="Base\DataStructs\FKDoubleIndexedDictionary.cs" />
+    <Compile Include="Base\DataStructs\FKSparseMatrix.cs" />
+    <Compile Include="Base\DataStructs\Vector\FKVector4Byte.cs" />
+    <Compile Include="Base\DataStructs\Vector\FKVector2Int.cs" />
+    <Compile Include="Base\DataStructs\Vector\FKVector3Int.cs" />
+    <Compile Include="Base\Extensions\FKArrayExtensions.cs" />
+    <Compile Include="Base\Extensions\FKBigintegerExtensions.cs" />
+    <Compile Include="Base\Extensions\FKDateTimeExtensions.cs" />
+    <Compile Include="Base\Extensions\FKEnumerableExtensions.cs" />
+    <Compile Include="Base\Extensions\FKListExtensions.cs" />
+    <Compile Include="Base\Extensions\FKNumberExtensions.cs" />
+    <Compile Include="Base\Extensions\FKStringBuilderExtensions.cs" />
+    <Compile Include="Base\Extensions\FKStringExtensions.cs" />
+    <Compile Include="Base\DesignPatterns\FKSingleton.cs" />
+    <Compile Include="Base\Helpers\FKFileFuncs.cs" />
+    <Compile Include="Base\Helpers\FKMathFuncs.cs" />
+    <Compile Include="Base\Helpers\FKSystemFuncs.cs" />
+    <Compile Include="Base\Logger\FKLogger.cs" />
+    <Compile Include="Base\Logger\FKLogHandler.cs" />
+    <Compile Include="Base\Logger\FKLogManager.cs" />
+    <Compile Include="Base\Logger\FKLogRouter.cs" />
+    <Compile Include="Base\Logger\SubHandler\FKConsoleHandler.cs" />
+    <Compile Include="Base\Logger\SubHandler\FKFileHandler.cs" />
+    <Compile Include="Config\FKAudioConfig.cs" />
+    <Compile Include="Config\FKCacheConfig.cs" />
+    <Compile Include="Config\FKDebugConfig.cs" />
+    <Compile Include="Config\FKEffectConfig.cs" />
+    <Compile Include="Config\FKChunkConfig.cs" />
+    <Compile Include="Config\FKEngineConfig.cs" />
+    <Compile Include="Config\FKGraphicsConfig.cs" />
+    <Compile Include="Config\FKWorldConfig.cs" />
+    <Compile Include="Debug\Commands\FKCommand_Clear.cs" />
+    <Compile Include="Debug\Commands\FKCommand_Exit.cs" />
+    <Compile Include="Debug\Commands\FKCommand_Fog.cs" />
+    <Compile Include="Debug\Commands\FKCommand_GetList.cs" />
+    <Compile Include="Debug\Commands\FKCommand_Help.cs" />
+    <Compile Include="Debug\Commands\FKCommand_Rasterizer.cs" />
+    <Compile Include="Debug\Console\FKGameConsoleInputProcessor.cs" />
+    <Compile Include="Debug\Console\FKGameConsole.cs" />
+    <Compile Include="Debug\Console\FKGameConsoleComponent.cs" />
+    <Compile Include="Debug\Console\FKGameConsoleOptions.cs" />
+    <Compile Include="Debug\Console\FKGameConsoleOutputLine.cs" />
+    <Compile Include="Debug\Console\FKGameConsoleRenderer.cs" />
+    <Compile Include="Debug\FKCommand.cs" />
+    <Compile Include="Debug\FKCommandAttribute.cs" />
+    <Compile Include="Debug\FKCommandHistory.cs" />
+    <Compile Include="Debug\FKCommandManager.cs" />
+    <Compile Include="Debug\FKCommandProcessor.cs" />
+    <Compile Include="Debug\FKDefaultCommand.cs" />
+    <Compile Include="Debug\FKSubCommandAttribute.cs" />
+    <Compile Include="Debug\InGame\FKBoundingBoxRenderer.cs" />
+    <Compile Include="Debug\InGame\FKInGameDebugger.cs" />
+    <Compile Include="Debug\InGame\IFKInGameDebugger.cs" />
+    <Compile Include="Framework\FKGameTime.cs" />
+    <Compile Include="Framework\FKWorld.cs" />
+    <Compile Include="Framework\Services\IFKAudioManagerService.cs" />
+    <Compile Include="Framework\Services\IFKInGameDebuggerService.cs" />
+    <Compile Include="Framework\FKEngine.cs" />
+    <Compile Include="Framework\Services\IFKFoggerService.cs" />
+    <Compile Include="Framework\Services\IFKAssetManagerService.cs" />
+    <Compile Include="Framework\Services\IFKProfileManagerService.cs" />
+    <Compile Include="Framework\Services\IFKSkyService.cs" />
+    <Compile Include="Framework\Services\IFKStatisticsService.cs" />
+    <Compile Include="Framework\Services\IFKTimeRulerService.cs" />
+    <Compile Include="Framework\Services\IFKUserInterfaceManagerService.cs" />
+    <Compile Include="Framework\Services\IFKVertexBuilderService.cs" />
+    <Compile Include="Framework\Services\IFKWorldService.cs" />
+    <Compile Include="Graphics\FKBasicShapesHelper.cs" />
+    <Compile Include="Graphics\Effect\PostProcessing\FKBloomComponent.cs" />
+    <Compile Include="Graphics\Effect\PostProcessing\FKBloomSetting.cs" />
+    <Compile Include="Graphics\Effect\PostProcessing\FKBloomState.cs" />
+    <Compile Include="Framework\Services\IFKCameraService.cs" />
+    <Compile Include="Framework\Services\IFKInputManagerService.cs" />
+    <Compile Include="Framework\Services\IFKGraphicsManagerService.cs" />
+    <Compile Include="Graphics\FKCamera.cs" />
+    <Compile Include="Graphics\FKGraphicsManager.cs" />
+    <Compile Include="Graphics\FKLayout.cs" />
+    <Compile Include="Graphics\FKLightning.cs" />
+    <Compile Include="Graphics\FKPrimitiveBatch.cs" />
+    <Compile Include="Graphics\FKRasterizer.cs" />
+    <Compile Include="Input\FKInputManager.cs" />
+    <Compile Include="Input\FKKeyEventArgs.cs" />
+    <Compile Include="Platform\Config\FKDebugConfig.cs" />
+    <Compile Include="Platform\Config\FKGraphicsConfig.cs" />
+    <Compile Include="Platform\Config\FKInputConfig.cs" />
+    <Compile Include="Platform\Config\FKScreenConfig.cs" />
+    <Compile Include="Platform\Enum\FKFrameworkEnum.cs" />
+    <Compile Include="Platform\Enum\FKGraphicsAPIEnum.cs" />
+    <Compile Include="Platform\FKPlatformConfig.cs" />
+    <Compile Include="Platform\Enum\FKPlatformEnum.cs" />
+    <Compile Include="Platform\FKPlatformHandler.cs" />
+    <Compile Include="Platform\FKPlatformHelper.cs" />
+    <Compile Include="Platform\FKPlatformManager.cs" />
+    <Compile Include="Platform\SubPlatform\Android\AndroidActivity.cs" />
+    <Compile Include="Platform\SubPlatform\Android\AndroidPlatformHandler.cs" />
+    <Compile Include="Platform\SubPlatform\iOS\IOSPlatformHandler.cs" />
+    <Compile Include="Platform\SubPlatform\iOS\Main.cs" />
+    <Compile Include="Platform\SubPlatform\Linux\LinuxPlatformHandler.cs" />
+    <Compile Include="Platform\SubPlatform\MacOS\MacOSPlatformHandler.cs" />
+    <Compile Include="Platform\SubPlatform\WindowsDesktop\WindowsPlatformHandler.cs" />
+    <Compile Include="Platform\SubPlatform\WindowsDesktop\WindowsPlatformHelper.cs" />
+    <Compile Include="Platform\SubPlatform\WindowsMetro\WindowsMetroPlatformHandler.cs" />
+    <Compile Include="Platform\SubPlatform\WindowsMetro\WindowsMetroPlatformHelper.cs" />
+    <Compile Include="Platform\SubPlatform\WinPhone7\WindowsPhone7PlatformHandler.cs" />
+    <Compile Include="Platform\SubPlatform\WinPhone7\WindowsPhone7PlatformHelper.cs" />
+    <Compile Include="Platform\SubPlatform\WinPhone8\WindowsPhone8LocalizedResource.cs" />
+    <Compile Include="Platform\SubPlatform\WinPhone8\WindowsPhone8PlatformHandler.cs" />
+    <Compile Include="Platform\SubPlatform\WinPhone8\WindowsPhone8PlatformHelper.cs" />
+    <Compile Include="Profile\FKDebugProfile.cs" />
+    <Compile Include="Profile\FKProfileManager.cs" />
+    <Compile Include="Profile\FKStatistics.cs" />
+    <Compile Include="Profile\SubProfile\FKBuildQueueProfile.cs" />
+    <Compile Include="Profile\SubProfile\FKFPSProfile.cs" />
+    <Compile Include="Profile\SubProfile\FKGenerateQueueProfile.cs" />
+    <Compile Include="Profile\SubProfile\FKLightenQueueProfile.cs" />
+    <Compile Include="Profile\SubProfile\FKMemoryProfile.cs" />
+    <Compile Include="Profile\SubProfile\FKReadyQueueProfile.cs" />
+    <Compile Include="Profile\SubProfile\FKRemoveQueueProfile.cs" />
+    <Compile Include="Profile\TimeRuler\FKTimeRuler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RenderObj\Block\BaseBlock\FKBaseBlock.cs" />
+    <Compile Include="RenderObj\Block\BaseBlock\FKBaseBlockStorage.cs" />
+    <Compile Include="Framework\Services\IFKBaseBlockStorageService.cs" />
+    <Compile Include="RenderObj\Block\BaseBlock\FKBaseBlockTextureHelper.cs" />
+    <Compile Include="RenderObj\Block\BaseBlock\FKBaseBlockType.cs" />
+    <Compile Include="RenderObj\Block\BaseBlock\FKBaseBlockWithPosition.cs" />
+    <Compile Include="RenderObj\Block\FKBlock.cs" />
+    <Compile Include="RenderObj\Block\FKBlockEnums.cs" />
+    <Compile Include="RenderObj\Block\FKBlockVertex.cs" />
+    <Compile Include="RenderObj\Chunk\FKBaseChunk.cs" />
+    <Compile Include="RenderObj\Chunk\FKBaseChunkCache.cs" />
+    <Compile Include="RenderObj\Chunk\FKBaseChunkState.cs" />
+    <Compile Include="Framework\Services\IFKBaseChunkCacheService.cs" />
+    <Compile Include="Framework\Services\IFKBaseChunkStorageService.cs" />
+    <Compile Include="RenderObj\Chunk\FKBaseChunkStorage.cs" />
+    <Compile Include="RenderObj\Chunk\FKVertexBuilder.cs" />
+    <Compile Include="RenderObj\Fog\FKFogger.cs" />
+    <Compile Include="RenderObj\Sky\FKSky.cs" />
+    <Compile Include="RenderObj\TerrainBiome\FKTerrainBiomeGenerator.cs" />
+    <Compile Include="RenderObj\TerrainBiome\FKTerrainBiomeGenerator_AntarticTundra.cs" />
+    <Compile Include="RenderObj\TerrainBiome\FKTerrainBiomeGenerator_Desert.cs" />
+    <Compile Include="RenderObj\TerrainBiome\FKTerrainBiomeGenerator_RainForest.cs" />
+    <Compile Include="RenderObj\Terrain\FKTerrainGenerator.cs" />
+    <Compile Include="RenderObj\Terrain\FKTerrainGenerator_Biomed.cs" />
+    <Compile Include="RenderObj\Terrain\FKTerrainGenerator_Flat.cs" />
+    <Compile Include="RenderObj\Terrain\FKTerrainGenerator_Mountain.cs" />
+    <Compile Include="RenderObj\Terrain\FKTerrainGenerator_Standard.cs" />
+    <Compile Include="RenderObj\Terrain\FKTerrainGenerator_Valley.cs" />
+    <Compile Include="RenderObj\UserInterface\FKUserInterfaceManager.cs" />
+    <Compile Include="RenderObj\UserInterface\FKUI_Base.cs" />
+    <Compile Include="RenderObj\UserInterface\SubUserInterface\FKUI_Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Platform\SubPlatform\WinPhone7\WMAppManifest.xml" />
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Platform\SubPlatform\iOS\info.plist" />
+    <None Include="Platform\SubPlatform\Linux\app.desktop" />
+    <None Include="Platform\SubPlatform\MacOS\Info.plist" />
+    <None Include="Platform\SubPlatform\WindowsDesktop\app.config" />
+    <None Include="Platform\SubPlatform\WindowsMetro\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

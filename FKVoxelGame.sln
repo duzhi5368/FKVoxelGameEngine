@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FKVoxelEngine", "FKVoxelEngine\FKVoxelEngine.csproj", "{501E7C05-6A51-451D-ABDA-6EEBFF9A67DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FKVoxelEngineTest", "FKVoxelEngineTest\FKVoxelEngineTest.csproj", "{9E0DA8EE-7290-4AF4-9FD0-92248D5DB302}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FKVoxelClient", "FKVoxelClient\FKVoxelClient.csproj", "{3C5237A8-6AC9-4DCF-AF29-17F308051F20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{501E7C05-6A51-451D-ABDA-6EEBFF9A67DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501E7C05-6A51-451D-ABDA-6EEBFF9A67DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501E7C05-6A51-451D-ABDA-6EEBFF9A67DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501E7C05-6A51-451D-ABDA-6EEBFF9A67DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0DA8EE-7290-4AF4-9FD0-92248D5DB302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0DA8EE-7290-4AF4-9FD0-92248D5DB302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0DA8EE-7290-4AF4-9FD0-92248D5DB302}.Release|Any CPU.ActiveCfg = Release|x86
+		{3C5237A8-6AC9-4DCF-AF29-17F308051F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C5237A8-6AC9-4DCF-AF29-17F308051F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C5237A8-6AC9-4DCF-AF29-17F308051F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C5237A8-6AC9-4DCF-AF29-17F308051F20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
